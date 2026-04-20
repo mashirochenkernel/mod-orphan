@@ -1,0 +1,16 @@
+# SPDX-License-Identifier: GPL-2.0
+
+ccflags-y += -DCONFIG_ATM_CLIP -DCONFIG_ATM_BR2684 -DCONFIG_PPPOATM
+ccflags-y += -DCONFIG_ATM_LANE -DCONFIG_ATM_MPOA
+
+obj-m += atm.o
+obj-m += clip.o
+obj-m += br2684.o
+obj-m += lec.o
+obj-m += mpoa.o
+obj-m += pppoatm.o
+
+atm-y := addr.o pvc.o signaling.o svc.o ioctl.o common.o atm_misc.o \
+	 raw.o resources.o atm_sysfs.o proc.o
+
+mpoa-y := mpc.o mpoa_caches.o mpoa_proc.o

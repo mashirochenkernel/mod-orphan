@@ -1,0 +1,27 @@
+# SPDX-License-Identifier: GPL-2.0
+
+CFLAGS_fore200e.o += -DCONFIG_ATM_FORE200E_USE_TASKLET
+CFLAGS_fore200e.o += -DCONFIG_ATM_FORE200E_TX_RETRY=16
+CFLAGS_fore200e.o += -DCONFIG_ATM_FORE200E_DEBUG=0
+
+CFLAGS_eni.o += -DCONFIG_ATM_ENI_BURST_TX_8W -DCONFIG_ATM_ENI_BURST_RX_4W
+
+CFLAGS_he.o += -DCONFIG_ATM_HE_USE_SUNI
+
+CFLAGS_nicstar.o += -DCONFIG_ATM_NICSTAR_USE_SUNI
+CFLAGS_idt77252.o += -DCONFIG_ATM_IDT77252_USE_SUNI
+
+obj-m += nicstar.o
+obj-m += iphase.o
+obj-m += suni.o
+obj-m += fore_200e.o
+obj-m += eni.o
+obj-m += idt77252.o
+obj-m += idt77105.o
+obj-m += solos-pci.o
+obj-m += adummy.o
+obj-m += atmtcp.o
+obj-m += lanai.o
+obj-m += he.o
+
+fore_200e-y := fore200e.o

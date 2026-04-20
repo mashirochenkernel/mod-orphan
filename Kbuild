@@ -7,3 +7,7 @@ obj-m += net/ax25/
 obj-m += net/netrom/
 obj-m += net/rose/
 obj-m += drivers/net/hamradio/
+
+obj-m += net/atm/
+obj-m += drivers/atm/
+obj-m += drivers/usb/atm/

@@ -1,14 +1,14 @@
 /* SPDX-License-Identifier: GPL-2.0 */
-#ifndef _HAMRADIO_COMPAT_H
-#define _HAMRADIO_COMPAT_H
+#ifndef _MOD_ORPHAN_COMPAT_H
+#define _MOD_ORPHAN_COMPAT_H
 
 #include <linux/slab.h>
 #include <linux/overflow.h>
 
 /*
- * Compat shims for kzalloc_obj/kmalloc_obj/kzalloc_objs which were
- * added in kernels newer than 6.x. If the kernel already has them
- * (detected via __alloc_objs), skip the definitions.
+ * Compat shims for kzalloc_obj/kmalloc_obj/kzalloc_objs/kmalloc_objs
+ * which were added in kernels newer than 6.x. If the kernel already
+ * has them (detected via __alloc_objs), skip the definitions.
  */
 #ifndef __alloc_objs
 
@@ -24,6 +24,9 @@
 #define kmalloc_obj(VAR_OR_TYPE, ...) \
 	__alloc_objs(kmalloc, default_gfp_compat(__VA_ARGS__), typeof(VAR_OR_TYPE), 1)
 
+#define kmalloc_objs(VAR_OR_TYPE, COUNT, ...) \
+	__alloc_objs(kmalloc, default_gfp_compat(__VA_ARGS__), typeof(VAR_OR_TYPE), COUNT)
+
 #define kzalloc_obj(P, ...) \
 	__alloc_objs(kzalloc, default_gfp_compat(__VA_ARGS__), typeof(P), 1)
 
@@ -32,4 +35,4 @@
 
 #endif /* __alloc_objs */
 
-#endif /* _HAMRADIO_COMPAT_H */
+#endif /* _MOD_ORPHAN_COMPAT_H */
