@@ -10,7 +10,6 @@ obj-m += drivers/net/hamradio/
 
 obj-m += net/atm/
 obj-m += drivers/atm/
-obj-m += drivers/usb/atm/
 
 obj-m += drivers/isdn/capi/
 obj-m += drivers/isdn/mISDN/

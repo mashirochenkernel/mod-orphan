@@ -1,7 +1,0 @@
-# SPDX-License-Identifier: GPL-2.0
-
-obj-m += cxacru.o
-obj-m += speedtch.o
-obj-m += ueagle-atm.o
-obj-m += usbatm.o
-obj-m += xusbatm.o
