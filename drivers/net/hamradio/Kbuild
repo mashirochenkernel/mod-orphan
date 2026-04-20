@@ -1,0 +1,14 @@
+# SPDX-License-Identifier: GPL-2.0
+
+CFLAGS_scc.o += -DCONFIG_SCC_TRXECHO
+
+obj-m += scc.o
+obj-m += mkiss.o
+obj-m += 6pack.o
+obj-m += yam.o
+obj-m += bpqether.o
+obj-m += hdlcdrv.o
+obj-m += baycom_ser_fdx.o
+obj-m += baycom_ser_hdx.o
+obj-m += baycom_par.o
+obj-m += baycom_epp.o
