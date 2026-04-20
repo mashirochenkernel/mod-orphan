@@ -1,0 +1,7 @@
+# SPDX-License-Identifier: GPL-2.0
+
+ccflags-y += -DCONFIG_ISDN_CAPI_MIDDLEWARE -DCONFIG_CAPI_TRACE
+
+obj-m += kernelcapi.o
+
+kernelcapi-y := kcapi.o capiutil.o capi.o kcapi_proc.o

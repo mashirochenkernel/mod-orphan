@@ -1,0 +1,11 @@
+# SPDX-License-Identifier: GPL-2.0
+
+obj-m += mISDN_core.o
+obj-m += mISDN_dsp.o
+obj-m += l1oip.o
+
+mISDN_core-y := core.o fsm.o socket.o clock.o hwchannel.o stack.o \
+		layer1.o layer2.o tei.o timerdev.o
+mISDN_dsp-y := dsp_core.o dsp_cmx.o dsp_tones.o dsp_dtmf.o dsp_audio.o \
+	       dsp_blowfish.o dsp_pipeline.o dsp_hwec.o
+l1oip-y := l1oip_core.o l1oip_codec.o

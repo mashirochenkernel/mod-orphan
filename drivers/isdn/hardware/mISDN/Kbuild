@@ -1,0 +1,13 @@
+# SPDX-License-Identifier: GPL-2.0
+
+obj-m += hfcpci.o
+obj-m += hfcmulti.o
+obj-m += hfcsusb.o
+obj-m += avmfritz.o
+obj-m += speedfax.o
+obj-m += mISDNinfineon.o
+obj-m += w6692.o
+obj-m += netjet.o
+obj-m += mISDNipac.o
+obj-m += mISDNisar.o
+obj-m += isdnhdlc.o
